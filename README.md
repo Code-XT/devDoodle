@@ -1,4 +1,4 @@
-# devDoodle - ##just another code editor
+# devDoodle - just another code editor
 
 It supports quite a few languages, each of which comes with their own set of issues so...if you find any (which probably won't be hard), lemme know
 
