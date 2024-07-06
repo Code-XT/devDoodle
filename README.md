@@ -1,8 +1,7 @@
-# React + Vite
+# devDoodle - ##just another code editor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It supports quite a few languages, each of which comes with their own set of issues so...if you find any (which probably won't be hard), lemme know
 
-Currently, two official plugins are available:
+btw...brainfuck is also supported🗿👍
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![2024-07-06 17 06 07 dev-doodle vercel app 9366b686ce93](https://github.com/Code-XT/devDoodle/assets/73749494/d49bb39b-6a38-4f58-8805-747289796ee6)
