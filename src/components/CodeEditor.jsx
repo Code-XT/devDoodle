@@ -4,6 +4,7 @@ import Select from "react-select";
 import languages from "../lib/languages";
 import boilerplate from "../lib/boilerplate";
 import executeCode from "../api/executeCode";
+import { Tooltip } from "react-tooltip";
 
 const CodeEditor = () => {
   const [language, setLanguage] = useState("javascript");
@@ -12,6 +13,7 @@ const CodeEditor = () => {
   const [stdin, setStdin] = useState("");
   const [args, setArgs] = useState("");
   const [running, setRunning] = useState(false);
+  const [theme, setTheme] = useState("vs-dark");
 
   const setLanguageHandler = (language) => {
     setLanguage(language.value);
@@ -51,12 +53,28 @@ const CodeEditor = () => {
             className="w-1/2 mb-4 text-black"
             placeholder="Select Language"
           />
-          <div className="text-xl font-semibold mb-4">Code</div>
+          <div className="text-xl font-semibold mb-4 flex flex-row">
+            <div>Code : </div>
+            <div className="ml-2">
+              <button
+                onClick={() => setTheme(theme === "vs-dark" ? "vs" : "vs-dark")}
+                onMouseOver={() => Tooltip.show("Dark Mode")}
+                data-tooltip-id="themeSwitcher"
+                data-tooltip-content={
+                  theme === "vs-dark"
+                    ? "Light Mode...Why💀"
+                    : "Dark Mode - Noice🗿"
+                }
+              >
+                {theme === "vs-dark" ? "☀️" : "🌙"}
+              </button>
+            </div>
+          </div>
           <div className="w-full h-full bg-gray-800 rounded-md overflow-hidden">
             <Editor
               height="80vh"
               language={language}
-              theme="vs-dark"
+              theme={theme}
               value={value}
               onChange={(value) => setValue(value)}
               options={{
@@ -100,6 +118,7 @@ const CodeEditor = () => {
               rows={1}
             />
           </div>
+          <Tooltip id="themeSwitcher" />
         </div>
       </div>
     </div>
